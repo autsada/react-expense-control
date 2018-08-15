@@ -2,20 +2,18 @@
 
 exports[`Should render ExpenseListItem correctly 1`] = `
 <div>
-  <ul>
-    <li>
-      <Link
-        replace={false}
-        to="/edit/1"
-      >
-        Description: 
-        Gum
-      </Link>
-      , Amount: 
-      195
-      , Created at: 
-      0
-    </li>
-  </ul>
+  <Link
+    replace={false}
+    to="/edit/1"
+  >
+    <h3>
+      Gum
+    </h3>
+  </Link>
+  <p>
+    $1.95
+    -
+    Jan 1st, 1970
+  </p>
 </div>
 `;
