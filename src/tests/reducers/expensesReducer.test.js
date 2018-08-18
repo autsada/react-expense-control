@@ -73,7 +73,7 @@ test('Should edit an expense matched by id', () => {
     expect(state[1].amount).toBe(expenseToEdit.updates.amount);
 });
 
-test('Should mot edit expense if id not found', () => {
+test('Should not edit expense if id not found', () => {
     const expenseToEdit = { 
         id: '1000',
         updates: {
@@ -89,4 +89,15 @@ test('Should mot edit expense if id not found', () => {
     const state = expensesReducer(expenses, action);
 
     expect(state).toEqual(expenses);
+});
+
+test('Should set expenses', () => {
+    const expensesToSet = [expenses[0], expenses[2]];
+    const action = {
+        type: 'SET_EXPENSES',
+        expenses: expensesToSet 
+    };
+    const state = expensesReducer(expenses, action);
+
+    expect(state).toEqual(expensesToSet);
 });
