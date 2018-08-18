@@ -4,18 +4,6 @@ import numeral from 'numeral';
 import expensesTotal from '../selectors/expensesTotal';
 import selectExpenses from '../selectors/getVisibleExpenses';
 
-// export const ExpensesListSummary = (props) => (
-//     <div>
-//         {
-//             props.expenses.length > 0 && 
-//             <p>
-//                 Total view: {props.expenses.length} {props.expenses.length === 1 ? 'expense' : 'expenses'}
-//                 -
-//                 Total amount: {expensesTotal(props.expenses.reduce((sum, prev) => sum + prev.amount, 0))}
-//             </p>
-//         }
-//     </div>
-// );
 export const ExpensesSummary = (props) => {
     const expensesCount = props.expenses.length;
     const word = expensesCount === 1 ? 'expense ' : 'expenses ';
