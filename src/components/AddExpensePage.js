@@ -12,27 +12,20 @@ export class AddExpensePage extends React.Component {
     render() {
         return (
             <div>
-                <h1>Add Expense</h1>
-                <ExpenseForm 
-                    onSubmit={this.onSubmit}
-                />
+                <div className="page-header" >
+                    <div className="content-container" >
+                        <h1 className="page-header__title" >Add Expense</h1>
+                    </div>
+                </div>
+                <div className="content-container" >
+                    <ExpenseForm 
+                        onSubmit={this.onSubmit}
+                    />
+                </div>
             </div>
         )
     }
 };
-
-// const AddExpensePage = (props) => (
-//     <div>
-//         <h1>Add Expense</h1>
-//         <ExpenseForm 
-//             onSubmit={(expense) => {
-//                 //props.dispatch(addExpense(expense));
-//                 props.addExpense(expense);
-//                 props.history.push('/');
-//             }}
-//         />
-//     </div>
-// );
 
 const mapDispatchToProps = (dispatch) => ({
     startAddExpense: (expense) => dispatch(startAddExpense(expense))

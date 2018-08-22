@@ -31,7 +31,6 @@ test('Should handle startEditExpense correctly', () => {
 
 test('Should handle startRemoveExpense correctly', () => {
     wrapper.find('button').simulate('click');
-    //wrapper.find('button').prop('onClick')(); // --> Need to check
 
     expect(history.push).toHaveBeenLastCalledWith('/');
     expect(startRemoveExpense).toHaveBeenLastCalledWith({ id: expenses[1].id });
